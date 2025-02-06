@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Steganographia Text Encoder",
+  "version": "1.0",
+  "description": "Encode selected text using angelic names from Steganographia.",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "content.js" ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
